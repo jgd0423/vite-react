@@ -18,10 +18,6 @@ const Label = styled.label`
   color: ${({ $invalid }) => ($invalid ? '#f87171' : '#6b7280')};
 `;
 
-//color: #ef4444;
-//border-color: #f73f3f;
-//background-color: #fed2d2;
-
 const Input = styled.input`
   width: 100%;
   padding: 0.75rem 1rem;
@@ -33,6 +29,21 @@ const Input = styled.input`
   box-shadow:
     0 1px 3px 0 rgba(0, 0, 0, 0.1),
     0 1px 2px 0 rgba(0, 0, 0, 0.06);
+`;
+
+const Button = styled.button`
+  padding: 1rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  color: #1f2937;
+  background-color: #f0b322;
+  border-radius: 6px;
+  border: none;
+
+  &:hover {
+    background-color: #f0920e;
+  }
 `;
 
 export default function AuthInputs() {
@@ -79,9 +90,7 @@ export default function AuthInputs() {
         <button type="button" className="text-button">
           Create a new account
         </button>
-        <button className="button" onClick={handleLogin}>
-          Sign In
-        </button>
+        <Button onClick={handleLogin}>Sign In</Button>
       </div>
     </div>
   );
