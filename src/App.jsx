@@ -49,7 +49,7 @@ function App() {
 
   function handleRemovePlace() {
     setPickedPlaces(prevPickedPlaces => prevPickedPlaces.filter(place => place.id !== selectedPlace.current));
-    setModalIsOpen(false);
+    // setModalIsOpen(false);
 
     const storedIds = JSON.parse(localStorage.getItem('selectedPlaces')) || [];
     localStorage.setItem('selectedPlaces', JSON.stringify(storedIds.filter(id => id !== selectedPlace.current)));
@@ -69,8 +69,8 @@ function App() {
       <main>
         <Places
           title="I'd like to visit ..."
-          fallbackText={'Select the places you would like to visit below.'}
           places={pickedPlaces}
+          fallbackText={'Select the places you would like to visit below.'}
           onSelectPlace={handleStartRemovePlace}
         />
         <Places
