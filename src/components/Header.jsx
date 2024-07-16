@@ -2,6 +2,8 @@ import logoImg from '../assets/logo.jpg';
 import Button from './UI/Button.jsx';
 
 export default function Header() {
+  const cartQuantity = 0;
+
   return (
     <header id="main-header">
       <div id="title">
@@ -9,7 +11,7 @@ export default function Header() {
         <h1>reactfood</h1>
       </div>
       <nav>
-        <Button textOnly>Cart (0)</Button>
+        <Button textOnly>Cart ({cartQuantity})</Button>
       </nav>
     </header>
   );
