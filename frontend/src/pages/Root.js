@@ -1,5 +1,5 @@
-import { Outlet } from 'react-router-dom';
 import MainNavigation from '../components/MainNavigation';
+import { Outlet } from 'react-router-dom';
 
 function RootLayout() {
   return (
