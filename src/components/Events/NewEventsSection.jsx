@@ -8,6 +8,8 @@ export default function NewEventsSection() {
   const { data, isPending, isError, error } = useQuery({
     queryKey: ['events'],
     queryFn: fetchEvents,
+    staleTime: 5 * 1000, // 특정 경로에 다시 접근하면 api를 자동으로 재요청한다. 다시 접근한 시간이 5초 이내이면 재요청을 하지 않는 옵션
+    // gcTime: 30 * 1000, // 캐시를 저장하는 시간. 기본값은 5분
   });
 
   let content;
